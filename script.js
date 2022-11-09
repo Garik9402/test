@@ -89,17 +89,18 @@ let paragrafNOde = document.getElementById('para')
 let colorsStr = ['один', 'два', 'три']
 let linkNode = document.querySelector('.link')
 let i = 0;
-
-linkNode.addEventListener('click', start)
-paragrafNOde.innerHTML = colorsStr[i];
-i = 1
-function start() {
-   paragrafNOde.innerHTML = colorsStr[i];
-   i++;
-   if (i >= colorsStr.length) {
-      i = 0
+let inpNode = document.querySelector('.header__input')
+let checkNode = document.querySelector('.checkbox')
+checkNode.addEventListener('click', func)
+function func() {
+   if (checkNode.checked == true) {
+      inpNode.style.display = 'block'
+   }
+   else if (checkNode.checked == false) {
+      inpNode.style.display = 'none'
    }
 }
+func()
 
 
 
