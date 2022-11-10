@@ -93,27 +93,16 @@ let inpNode = document.querySelector('.header__input')
 let checkNode = document.querySelectorAll('.checkbox')
 // checkNode.addEventListener('click', func)
 let listNode = document.querySelectorAll('.list')
+let buttonNode = document.querySelectorAll('.button')
+buttonNode.forEach(el => {
+   el.addEventListener('click', function () {
+      let str = el.closest('.list')
+      str.style.display = 'none'
+   })
+})
 
 function func() {
-   checkNode.forEach(elem => {
-      elem.addEventListener('click', function () {
-         if (elem.checked == true && elem.value == 'перечеркнуть') {
-            paragrafNOde.style.textDecoration = 'line-through'
-         }
-         else if (elem.checked == true && elem.value == 'сделать жирным') {
-            paragrafNOde.style.fontWeight = 'bold'
-         }
 
-         else if (elem.checked == true && elem.value == 'сделать красным') {
-            paragrafNOde.style.color = 'red'
-         }
-         else if (elem.checked == false) {
-            paragrafNOde.style.color = ''
-            paragrafNOde.style.textDecoration = 'none'
-            paragrafNOde.style.fontWeight = 'normal'
-         }
-      })
-   })
 }
 func()
 
