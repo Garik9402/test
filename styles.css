@@ -31,4 +31,10 @@
   width: 20px;
   height: 20px;
   margin-top: 10px;
+}
+
+.checkbox {
+  -webkit-text-decoration: li;
+          text-decoration: li;
+  display: inline;
 }/*# sourceMappingURL=styles.css.map */

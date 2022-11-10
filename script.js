@@ -90,22 +90,32 @@ let colorsStr = ['один', 'два', 'три']
 let linkNode = document.querySelector('.link')
 let i = 1;
 let inpNode = document.querySelector('.header__input')
-let checkNode = document.querySelector('.checkbox')
-checkNode.addEventListener('click', func)
+let checkNode = document.querySelectorAll('.checkbox')
+// checkNode.addEventListener('click', func)
 let listNode = document.querySelectorAll('.list')
 
 function func() {
-   let ind = i = +inpNode.value
-   console.log()
-   listNode.forEach(elem => {
-      if (ind == elem) {
-         console.log(true)
-      }
-      else (
-         console.log(false)
-      )
+   checkNode.forEach(elem => {
+      elem.addEventListener('click', function () {
+         if (elem.checked == true && elem.value == 'перечеркнуть') {
+            paragrafNOde.style.textDecoration = 'line-through'
+         }
+         else if (elem.checked == true && elem.value == 'сделать жирным') {
+            paragrafNOde.style.fontWeight = 'bold'
+         }
+
+         else if (elem.checked == true && elem.value == 'сделать красным') {
+            paragrafNOde.style.color = 'red'
+         }
+         else if (elem.checked == false) {
+            paragrafNOde.style.color = ''
+            paragrafNOde.style.textDecoration = 'none'
+            paragrafNOde.style.fontWeight = 'normal'
+         }
+      })
    })
 }
+func()
 
 
 
