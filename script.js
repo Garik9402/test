@@ -88,20 +88,24 @@
 let paragrafNOde = document.getElementById('para')
 let colorsStr = ['один', 'два', 'три']
 let linkNode = document.querySelector('.link')
-let i = 0;
+let i = 1;
 let inpNode = document.querySelector('.header__input')
 let checkNode = document.querySelector('.checkbox')
 checkNode.addEventListener('click', func)
-function func() {
-   if (checkNode.checked == true) {
-      inpNode.style.display = 'block'
-   }
-   else if (checkNode.checked == false) {
-      inpNode.style.display = 'none'
-   }
-}
-func()
+let listNode = document.querySelectorAll('.list')
 
+function func() {
+   let ind = i = +inpNode.value
+   console.log()
+   listNode.forEach(elem => {
+      if (ind == elem) {
+         console.log(true)
+      }
+      else (
+         console.log(false)
+      )
+   })
+}
 
 
 
